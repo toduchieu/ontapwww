@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form style="text-align: center; width: 80%" th:action="@{/project/add}" th:object="${project}" role="form" method="post">
+    <div>
+      <label>Id</label><br/>
+      <input type="text" th:field="${project.id}"/>
+    </div>
+    <div>
+      <label>Budget</label><br/>
+      <input type="text" th:field="${project.budget}"/>
+    </div>
+    <div>
+      <label>department</label><br/>
+      <input type="text" th:field="${project.department}"/>
+    </div>
+    <div>
+      <label>location</label><br/>
+      <input type="text" th:field="${project.location}"/>
+    </div>
+    <div>
+      <label>Name</label><br/>
+      <input type="text" th:field="${project.Name}"/>
+    </div>
+    <div>
+      <label>Start date(Năm-tháng-ngày)</label><br/>
+      <input type="text" th:field="${project.startDate}"/>
+    </div>
+    <div>
+      <input type="submit" value="Add"/>
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+</html>
